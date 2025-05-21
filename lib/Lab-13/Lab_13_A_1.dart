@@ -229,6 +229,18 @@ class _RegistrationFormState extends State<RegistrationForm> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(content: Text("Form Submitted")),
                         );
+                        print(firstName.text);
+                        print(lastName.text);
+                        print(email.text);
+                        print(mobile.text);
+                        print(city.text);
+                        print(gender);
+                        print(dob.text);
+                        print(hobbyMusic ? "music": "");
+                        print(hobbyReading ? "Reading" : "");
+                        print(hobbyTimePass ? "TP" : "");
+                        print(password.text);
+                        print(confirmPassword.text);
                       }
                     },
                     child: Text("Save"),

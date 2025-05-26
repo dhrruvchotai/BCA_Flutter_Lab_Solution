@@ -7,12 +7,16 @@ class ItemListScreen extends StatefulWidget {
 
 class _ItemListScreenState extends State<ItemListScreen> {
   List<String> items = ['Item 1', 'Item 2', 'Item 3'];
+  bool showingOriginal = true;
 
   Future<void> _refreshList() async {
     setState(() {
-      // Instead of creating a new list, update the existing one
-      items.clear();
-      items.addAll(['Item A', 'Item B', 'Item C']);
+      if (showingOriginal) {
+        items = ['Item A', 'Item B', 'Item C'];
+      } else {
+        items = ['Item 1', 'Item 2', 'Item 3'];
+      }
+      showingOriginal = !showingOriginal;
     });
   }
 

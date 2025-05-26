@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-void main() => runApp(MaterialApp(home: UserFormAPI()));
-
 class UserFormAPI extends StatefulWidget {
   @override
   _UserFormAPIState createState() => _UserFormAPIState();
@@ -18,7 +16,7 @@ class _UserFormAPIState extends State<UserFormAPI> {
 
   Future<void> submitData() async {
     if (_formKey.currentState!.validate()) {
-      final url = Uri.parse('https://6673d5f375872d0e0a93e612.mockapi.io/me/Dhruv/Matrimony');
+      final url = Uri.parse('https://6673d5f375872d0e0a93e612.mockapi.io/me/Dhruv/Users');
 
       final response = await http.post(
         url,

@@ -14,5 +14,5 @@ void main() {
   int sub5 = int.parse(stdin.readLineSync()!);
 
   //print their percentage
-  stdout.write((sub1 + sub2 + sub3 + sub4 + sub5) / 5);
+  print("The percentage is ${(sub1 + sub2 + sub3 + sub4 + sub5) / 5}");
 }
